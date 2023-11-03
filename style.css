@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(#2b1055, #7597de);
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  background-color: #00000059;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 15px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000000;
+}
+
+header .logo {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 0.5rem #fff;
+  transition: 0.5s ease;
+}
+
+header .logo:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+header ul li a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff !important;
+  border-radius: 20px;
+  transition: 0.5s ease;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  background-color: #fff;
+  color: #2b1055 !important;
+  box-shadow: 0 0 0.5rem #fff;
+}
+
+#home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 1000;
+}
+
+#home img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  transition: 1s ease;
+}
+
+#home img#moon {
+  mix-blend-mode: screen;
+  transition: 1s ease;
+}
+
+#home img#mountains_front {
+  z-index: 10;
+  transition: 1s ease;
+}
+
+#text {
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+  font-weight: 900;
+  text-shadow: 0 0 0.5rem #fff;
+  transition: 1s ease;
+  margin-bottom: 2rem;
+}
+
+.button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background-color: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
+  box-shadow: 0 0 0.5rem #fff;
+  transition: 1s ease;
+}
+
+.button:hover {
+  box-shadow: 0 0 0;
+}
+
+.about {
+  background: #1c0522;
+  display: flex;
+}
+
+h2 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+
+.about h4 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+p {
+  color: #fff;
+  font-size: 1.2rem;
+  width: 70%;
+}
+
+.gallery {
+  background-color: #2b1055;
+}
+
+.contact {
+  background: #1c0522;
+  padding-top: 7rem;
+  padding-bottom: 20rem;
+}
+
+footer {
+  display: flex;
+  background-color: #2b1055;
+  padding: 1.5rem 0;
+  justify-content: center;
+}
+
+#menu-icon {
+  font-size: 3rem;
+  color: #fff;
+  display: none;
+  z-index: 10999999999;
+}
+
+@media (max-width: 991px) {
+  p {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+
+  .about img {
+    width: 100% !important;
+    height: 70% !important;
+  }
+
+  .gallery img {
+    width: 105% !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .about img {
+    width: 75% !important;
+    height: 80% !important;
+  }
+
+  .gallery img {
+    margin-bottom: 2rem !important;
+  }
+
+  #menu-icon {
+    display: block;
+  }
+
+  header ul {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 50%;
+    padding: 1rem 3%;
+    background-color: #00000059;
+    display: none;
+    border-radius: 0 0 0 50px;
+  }
+
+  ul.active {
+    display: block;
+  }
+
+  ul a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery img {
+    width: 100% !important;
+  }
+
+  h2 {
+    font-size: 3rem !important;
+  }
+
+  header ul {
+    width: 50%;
+  }
+}
